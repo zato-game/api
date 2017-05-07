@@ -3,4 +3,4 @@ The Zato API handles the user database, registration and logging in.
 
 # Modules required
 * flask
-* flask-mysqldb
+* flask-mysqldb (requires python-dev installed!)
