@@ -4,20 +4,17 @@
 
 # get flask stuff
 import os
-from flask import Flask, render_template_string, jsonify, abort, make_respone, request
+from flask import render_template_string, jsonify, abort, request
 # might not be used
-from flask_mail import Mail
+#from flask_mail import Mail
 # will be used
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 
 # own libraries
 from lib.errors import *
 from lib.users import *
 from lib.databaseTools import *
-
-
-# flask setup
-app = Flask(__name__)
+# flask will be setup through the __init__ inside of lib
 
 # index with a 404
 @app.route("/")
