@@ -2,19 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage("Build") {
             steps {
-                echo 'Building..'
+                sh "pip install virtualenv"
+                sh "virtualenv python"
+                sh "python/bin/pip install flask"
+                sh "python/bin/pip install flask-mysqldb"
             }
         }
-        stage('Test') {
+        stage("Dev-deploy") {
             steps {
-                echo 'Testing..'
+                echo "Deploying to development.."
             }
         }
-        stage('Deploy') {
+        stage("Prod-Deploy") {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying to production....'
             }
         }
     }
