@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh "pip install virtualenv"
                 sh "virtualenv python"
                 sh "python/bin/pip install flask"
                 sh "python/bin/pip install flask-mysqldb"
